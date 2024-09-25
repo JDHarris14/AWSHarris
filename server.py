@@ -11,10 +11,10 @@ def register_user():
     data = request.form
     codigo, nombre, apellido, actividad, horainicio, horafinal = data["codigo"], data["nombre"], data["apellido"], data["actividad"], data["horainicio"], data["horafinal"]
     insert(codigo, nombre, apellido, actividad, horainicio, horafinal)
-    return "User added"
+    return "Usuario Agregado"
 
      
-if _name_ == "_main_":    
-    host = "127.0.0.1",
-    port =8000,
+if __name__ == "__main__":    
+    host = "172.31.22.113"
+    port =80
     app.run(host, port, True)
